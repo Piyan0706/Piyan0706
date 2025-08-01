@@ -997,7 +997,20 @@ nav.navbar .nav-links a.active-link::before
   {
     font-size: 1.6rem;
   }
+  
+  .our-journal-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px; /* Jarak antar kartu */
+}
 
+.our-journal-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 300px; /* Ini akan mengatur lebar dan fleksibilitas kartu */
+}
 
   /* Gallery */
   .gallery .frame-image
