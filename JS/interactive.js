@@ -207,13 +207,3 @@ function toggleLocalPlayPause() {
 if (playMusicIcon) {
   playMusicIcon.addEventListener('click', toggleLocalPlayPause);
 }
-
-// Fungsi untuk membuka pop-up bunga
-function showFlowerPopup() {
-    document.querySelector('.flower-popup').classList.add('show');
-}
-
-// Fungsi untuk menutup pop-up bunga
-function closeFlowerPopup() {
-    document.querySelector('.flower-popup').classList.remove('show');
-}
