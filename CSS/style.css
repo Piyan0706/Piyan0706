@@ -1412,3 +1412,83 @@ nav.navbar .nav-links a.active-link::before
 #play-music-icon:hover {
   transform: scale(1.2); /* Memperbesar ikon sebesar 20% saat kursor di atasnya */
 }
+
+
+/* Gaya untuk Pop-up Animasi Bunga */
+.flower-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.flower-popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Gaya untuk tombol tutup */
+.close-flower-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+.close-flower-popup i {
+  font-size: 2rem;
+}
+
+/* Gaya dari halaman bunga yang asli, agar animasinya berfungsi dengan benar */
+.flower-popup .night {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  filter: blur(0.1vmin);
+  background-image: radial-gradient(
+    ellipse at top,
+    transparent 0%,
+    #000
+  ),
+  radial-gradient(
+    ellipse at bottom,
+    #000,
+    rgba(145, 233, 255, 0.2)
+  ),
+  repeating-linear-gradient(
+    220deg,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 19px,
+    transparent 19px,
+    transparent 22px
+  ),
+  repeating-linear-gradient(
+    189deg,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 19px,
+    transparent 19px,
+    transparent 22px
+  ),
+  repeating-linear-gradient(
+    148deg,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 19px,
+    transparent 19px,
+    transparent 22px
+  ),
+  linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+}
